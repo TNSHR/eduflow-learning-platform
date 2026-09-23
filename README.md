@@ -1,2 +1,16 @@
-# eduflow-learning-platform
-Description: Production-ready full-stack learning platform built with Next.js 16, TypeScript, PostgreSQL and Tailwind CSS. 
+# EduFlow Learning Platform
+
+A production-oriented full-stack learning platform built with Next.js 16, TypeScript, Tailwind CSS, and PostgreSQL.
+
+## Project Status
+
+🚧 Under active development.
+
+## Technology Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- PostgreSQL
+- Prisma

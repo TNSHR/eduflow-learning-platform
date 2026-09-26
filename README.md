@@ -1,3 +1,47 @@
+## 🔐 Demo Credentials
+
+The following seeded accounts are available for evaluating the deployed EduFlow application.
+
+> **Live Demo:** https://eduflow-learning-platform.vercel.app/login
+
+### Admin
+
+```text
+Email:    admin@eduflow.test
+Password: Password@123
+```
+
+### Teacher 1
+
+```text
+Email:    teacher1@eduflow.test
+Password: Password@123
+```
+
+### Teacher 2
+
+```text
+Email:    teacher2@eduflow.test
+Password: Password@123
+```
+
+### Student
+
+```text
+Email:    student1@eduflow.test
+Password: Password@123
+```
+
+### Suggested Evaluation Flow
+
+* **Student:** Browse published courses → Enroll → Continue learning → Complete lessons → Attempt quizzes → View progress.
+* **Teacher:** Create and manage courses → Add lessons → Create quizzes → Manage owned course content.
+* **Admin:** Access the broader course-management functionality and review the platform from an administrative perspective.
+
+> These credentials are **demo/assessment accounts only** and should not be used for real or sensitive data.
+
+
+
 # EduFlow — Smart Learning & Course Management Platform
 
 EduFlow is a full-stack learning and course management platform built with **Next.js 16, React 19, TypeScript, Tailwind CSS, PostgreSQL, Prisma, and secure session-based authentication**.
@@ -24,6 +68,8 @@ The platform is designed around a realistic learning workflow rather than a basi
 ### Course Management
 
 Teachers and administrators can:
+Email: teacher1@eduflow.test
+Password: Password@123
 
 * Create courses
 * View courses

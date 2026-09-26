@@ -31,8 +31,40 @@ model User {
   courses      Course[]
   enrollments  Enrollment[]
   quizAttempts QuizAttempt[]
+  sessions     Session[]
+  lessonProgress LessonProgress[]
 
   @@index([role])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model LessonProgress {
+  id          String   @id @default(cuid())
+  studentId   String
+  lessonId    String
+  completed   Boolean  @default(false)
+  completedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  student User   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  lesson  Lesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, lessonId])
+  @@index([studentId])
+  @@index([lessonId])
 }
 
 model Course {
@@ -64,6 +96,7 @@ model Lesson {
 
   course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
   quiz   Quiz?
+  progress LessonProgress[]
 
   @@unique([courseId, order])
   @@index([courseId])
